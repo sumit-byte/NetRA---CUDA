@@ -13,20 +13,23 @@ for i in range(matSize):
             f.write(str(num)+" ");
     f.write("\r\n")
 f.close();
-from array import *
+
+intCast = lambda l : [int(item) for item in l];
+
 rows, cols = (5, 10);
 A = [[]]
 B = [[]]
 k=l=0;
 fh=open("/home/netra/Desktop/Swaraj/adj.txt");
+
 for line in fh:
     if(k<=rows-1):
         x=line.split(" ");
-        A.insert(k,x[:cols]);
+        A.insert(k,intCast(x[:cols]));
         k+=1;
     else:
         x=line.split(" ");
-        B.insert(l,x[:cols]);
+        B.insert(l,intCast(x[:cols]));
         l+=1;
 del A[rows]
 del B[rows]
