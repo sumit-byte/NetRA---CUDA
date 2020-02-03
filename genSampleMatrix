@@ -10,3 +10,14 @@ for i in range(matSize):
             f.write(str(num)+" ");
     f.write("\r\n")
 f.close();
+
+rows, cols = (5, 10);
+A = [[0 for i in range(cols)] for j in range(rows)] 
+k=0;
+fh=open("/home/netra/Desktop/Swaraj/adj.txt");
+for line in fh:
+    x=line.split(" ");
+    for i in range(rows):
+        for j in range(cols):
+            A[i][j]=x[j];
+print(A)
