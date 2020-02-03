@@ -1,0 +1,2 @@
+import numpy as np
+matrix = np.loadtxt('/home/netra/Desktop/Swaraj/ProjectNETRA/Result/adj.csv', usecols=range(100))
